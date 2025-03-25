@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNTN Kim Phát</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title">DNTN Kim Phát</div>
+    <div class="address">Đ/c: 1527 Nguyễn Ái Quốc, Tân Tiến, Biên Hoà, Đồng Nai.</div>
+    <div class="phone">
+        <span class="phone-number">0888.888.840</span> 
+        <span>0966.822.906</span> 
+        <span>0938.121.901</span>
+    </div>    
+    <div class="container">
+        <div class="box">
+            <label>Giá vàng 9999 (triệu/chỉ)</label>
+            <input type="number" id="price9999" placeholder="Nhập giá vàng 9999">
+            <button onclick="calculateSellPrices()">Nhập</button>
+            <label>Cân nặng mới (chỉ)</label>
+            <input type="number" id="weightNew" placeholder="Nhập cân nặng" step="0.01">
+            <label>Loại vàng mới</label>
+            <select id="goldType">
+                <option value="9999">9999</option>
+                <option value="980">980</option>
+                <option value="950">950</option>
+                <option value="680">680</option>
+                <option value="610">610</option>
+                <option value="10K">10K</option>
+            </select>
+            <label>Tiền công (trăm ngàn)</label>
+            <input type="number" id="laborCost" placeholder="Nhập tiền công">
+            <button onclick="calculateNewPrice()">Tính Giá Mới</button>
+            <div id="newPriceResult" class="result"></div>
+        </div>
+        <div class="box">
+            <label>Cân nặng cũ (chỉ)</label>
+            <input type="number" id="weightOld" placeholder="Nhập cân nặng" step="0.01">
+            <label>Loại vàng cũ</label>
+            <select id="oldGoldType">
+                <option value="9999">9999</option>
+                <option value="980">980</option>
+                <option value="950">950</option>
+                <option value="680">680</option>
+                <option value="610">610</option>
+                <option value="10K">10K</option>
+            </select>
+            <label>Chênh lệch (ngàn đồng/phân)</label>
+            <input type="number" id="exchangeUnitPrice" placeholder="Nhập chênh lệch">
+            <button onclick="calculateOldPrice()">Tính Giá Cũ</button>
+            <div id="oldPriceResult" class="result"></div>
+        </div>
+    </div>
+
+    <div class="calculate-section">
+        <button class="calculate-button" onclick="calculateExchange()">Tính Giá Đổi</button>
+        <div id="exchangeResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
